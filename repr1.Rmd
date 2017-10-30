@@ -1,0 +1,64 @@
+---
+title: "Repr. research assignment 1"
+author: "Aurel Prosz"
+date: '2017 október 28 '
+output: html_document
+---
+## System Information
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+Sys.info()
+
+```
+## analyze_data.R
+### Loading and preprocessing the data
+First we read in the raw data from the specific file "activity.csv".  
+**Don't forget to set your working directory where this file presents!**  
+```{r}
+datax <- read.csv("activity.csv", sep = ",", 
+     na.strings = "NA")
+
+
+```
+Let's look at the first 5 rows of this data:
+```{r}
+head(datax, 5)
+
+```
+We should format the *date* column to Date format:
+```{r}
+class(datax$date)
+datax$date <- as.Date(datax$date)
+class(datax$date)
+
+```
+### What is mean total number of steps taken per day?
+
+Aggregate the data frame by *date* column:
+```{r}
+datax.sums <-  aggregate(x = datax["steps"],
+     FUN = sum,
+     by = list(Group.date = datax$date), 
+     na.rm=TRUE)
+
+head(datax.sums, 5)
+```
+Make a histogram from the results:
+
+```{r, fig.width=6, fig.height=6}
+hist(datax.sums$steps, col = "red", 
+     xlab = "Total number of steps", 
+     breaks = 20, 
+     main = "Histogram of total number of steps per day")
+```
+
+Calculate the median and the mean for the total number of steps per day:
+```{r}
+numberofsteps.median <- median(datax.sums$steps)
+numberofsteps.mean <- mean(datax.sums$steps)
+
+```
+The **median** is `r numberofsteps.median` and the **mean** is `r numberofsteps.mean`
+

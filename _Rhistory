@@ -1,0 +1,217 @@
+get <- function() x
+get()
+x <- 5
+get()
+get <- function() x*x
+get()
+makeVector <- function(x = numeric()) {
+m <- NULL
+set <- function(y) {
+x <<- y
+m <<- NULL
+}
+get <- function() x
+setmean <- function(mean) m <<- mean
+getmean <- function() m
+list(set = set, get = get,
+setmean = setmean,
+getmean = getmean)
+}
+clear(get)
+cachemean <- function(x, ...) {
+m <- x$getmean()
+if(!is.null(m)) {
+message("getting cached data")
+return(m)
+}
+data <- x$get()
+m <- mean(data, ...)
+x$setmean(m)
+m
+}
+makeVector(1:5)
+makeVector(1)
+z <- makeVevtor(1.5)
+z <- makeVector(1.5)
+z
+str(z)
+View(get)
+View(get)
+makeVector <- function(x = numeric()) {
++     m <- NULL
++     set <- function(y) {
++         x <<- y
++         m <<- NULL
++     }
++     get <- function() x
++     setmean <- function(mean) m <<- mean
++     getmean <- function() m
++     list(set = set, get = get,
++          setmean = setmean,
++          getmean = getmean)
++ }
+makeVector <- function(x = numeric()) {
+m <- NULL
+set <- function(y) {
+x <<- y
+m <<- NULL
+}
+get <- function() x
+setmean <- function(mean) m <<- mean
+getmean <- function() m
+list(set = set, get = get,
+setmean = setmean,
+getmean = getmean)
+}
+str(makeVector)
+z <- makeVector(1:5)
+z
+makeVector.set(5)
+z[1]
+z[1](5)
+cachemean <- function(x, ...) {
+m <- x$getmean()
+if(!is.null(m)) {
+message("getting cached data")
+return(m)
+}
+data <- x$get()
+m <- mean(data, ...)
+x$setmean(m)
+m
+}
+z$setmean(1)
+z$setmean
+cachemean(1:5)
+cachemean(1)
+cachemean(1:10)
+makeVector(1:5)
+cachemean(z)
+cachemean(makeVector(1:10))
+cachemean(makeVector(0:10))
+p <- function(mean) m <<- mean
+p(1:5)
+library(nlme)
+library(lattice)
+xyplot(weight ~ Time | Diet, BodyWeight)
+typeof(xyplot(weight ~ Time | Diet, BodyWeight))
+g <- xyplot(weight ~ Time | Diet, BodyWeight)
+g[1]
+View(g)
+g
+library(lattice)
+library(datasets)
+data(airquality)
+p <- xyplot(Ozone ~ Wind | factor(Month), data = airquality)
+g
+p
+g
+p
+library(datasets)
+data(airquality)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+install.packages("ggplot2")
+library(ggplot2)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+qplot(Wind, Ozone, data = airquality, facets = . ~ factor(Month))
+airquality = transform(airquality, Month = factor(Month))
+qplot(Wind, Ozone, data = airquality, facets = . ~ Month)
+library(ggplot2)
+library(ggplot2movies)
+g <- ggplot(movies, aes(votes, rating))
+print(g)
+rm(g)
+library(ggplot2)
+library(ggplot2movies)
+g <- ggplot(movies, aes(votes, rating))
+print(g)
+g <- ggplot(movies, aes(votes, rating))
+qplot(votes, rating, data = movies)
+setwd("~/")
+setwd("C:/Users/Letan1/Desktop/repr_1")
+datax <- read.csv("activity.csv", sep = ",",
+na.strings = "NA")
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+plot( datax$interval, datax$steps)
+plot( datax$interval, datax$steps, type = 'l')
+datax.sums <-  aggregate(x = datax["date"],
+FUN = sum,
+by = list(datax$interval),
+na.rm=TRUE)
+datax.mean <-  aggregate(x = datax["date"],
+FUN = mean,
+by = list(datax$interval),
+na.rm=TRUE)
+View(datax.mean)
+datax.mean <-  aggregate(x = datax["steps"],
+FUN = mean,
+by = list(datax$interval),
+na.rm=TRUE)
+plot( datax$interval, datax$steps, type = 'l')
+plot( datax.mean$Group.1, datax.mean$steps, type = 'l')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+complete.cases(datax)
+complete.cases(datax$steps)
+View(datax)
+sum(complete.cases(datax))
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+View(datax.mean)
+View(datax)
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+View(datax.merged)
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+datax$steps[1]
+datax$steps[1] == "NA"
+datax$steps[1] = "NA"
+datax$steps[1] == "NA"
+datax$steps[2] == "NA"
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+as.character(datax$steps[1])
+as.character(datax$steps[2])
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+datax$steps[i]
+class(datax$steps[2])
+as.character(datax$steps[2])
+class(as.character(datax$steps[2]))
+class("NA")
+class(as.character(datax$steps[2])) == "NA"
+as.character(datax$steps[2]) == "NA"
+is.na(datax$steps[2])
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+View(datax)
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+View(datax.new)
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+source('C:/Users/Letan1/Desktop/repr_1/analyze_data.R')
+View(datax.new.sums)
+View(datax.sums)
+View(datax.new.sums)
+View(datax.new)
+View(datax.mean)
