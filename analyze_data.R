@@ -7,6 +7,9 @@
 #----------------------------------------------------------#
 
 Sys.setlocale("LC_TIME", "English")
+library(lattice)
+library(dplyr)
+library(ggplot2)
 
 datax <- read.csv("activity.csv", sep = ",", 
      na.strings = "NA")
